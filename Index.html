@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@800&family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f83186e552.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Curriculum.js"></script>  
+    <link rel="stylesheet" href="Estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+</head>
+<body on>
+    <nav>
+        
+        <ul id="Categorias">
+
+            <li class="indice" onclick="Mostrar('Sobre_Mi')"><i class="icono fa-solid fa-user"></iclass></i>SOBRE MI</li>
+
+            <li class="indice" onclick="Mostrar('Educacion')"><i class="icono fa-solid fa-graduation-cap"></i>EDUCACION</li>
+
+            <li class="indice" onclick="Mostrar('Experiencia')"><i class="icono fa-solid fa-user-tie"></i>EXPERIENCIA</li>
+
+            <li class="indice" onclick="Mostrar('Habilidades')"><i class="icono fa-solid fa-user-plus"></i>HABILIDADES</li>
+
+        </ul>
+
+    </nav>
+
+    <header>
+        <img id="Foto" src="https://randomuser.me/api/portraits/men/73.jpg" onload="Mostrar('Inicio')"/>
+        <p id="Nombre">Raul Rementeria</p>
+    </header>
+
+    <section id="Inicio">
+
+        <form action="/action_page.php"> 
+
+            <legend>ENVIAME UN MENSAJE</legend>
+
+            <div>
+                <label for="NombreYApellido">Tu nombre y Apellido:</label><input type="text" id="NombreYApellido" name="NombreYApellido"><br>
+                <label for="Email">Tu email:</label><input type="email" id="Email" name="Email"><br>
+                <label for="Mensaje">Tu mensaje:</label><textarea id="Mensaje" name="Mensaje" rows="4" cols="50"></textarea><br>
+                <input type="submit" value="Submit">
+            </div>
+
+            <img id="IMG_Mensaje"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAAD4CAMAAACXF/l7AAAAzFBMVEX///8AAAAREiTDxMb39/f7+/v09PTx8fHo6OjY2Nj29vaTk5O1tbXu7u7V1dXKysrj4+OJiYlWVla/v7+vr6/Q0NBzc3OioqJdXV0jIyNDQ0NiYmLe3t5NTU2BgYGkpKQ5OTkAABsyMjKOjo5tbW0sLCwdHR1xcXEUFBRISEgLCwuZmZk2NjYJCRMAABV7e3tBQk2TlJt1dX0eIC6Cg4lYWGJPT1oaGytra3QpKS4WFhw2N0QsLTkAABK6usAdHi1hYWt/f4k9P0gwMjwdssYRAAAZZElEQVR4nO1dCXvaOBqWY4xtfN/3AZjTNA4ppOy2nUm7//8/rSTLCUkIt0V3nn07aSeEYL229N36BMCNoLD20BxN5/PpICot/lbDuBicWPrMOyTZ/ySf2Bi8Z4IxHyq3Htqp0F6eSV6kUmbb3jAt8vqVqf36Pk4QHU3THCf+Yyk6CRm2wfLc68tc1zHw6y7+NparMJg3pKcDP3NuNN436DqZGUzHSVnf3rQeXrFzbBn6kdmxqhca26g0qgN/C04to+nWYIbwtXqGVcInv9KL3o5/vDDdNK2iMKjXVNajSeAVwjB4f2uL+rmY8Z5fGzayICwyTX+dh7rljtDr5Q0kXtdopntSTCYRWd74vmf7f1NCdIfOjmfXY9FzDeyPP2kXWv1URkOxvpEdQSYTKN/3WDAk63PhhaVHol9voEcAL2QmZN+8KLjoRevCj7aPeLhXRYnX7sdh65DOwQdzCEqIVx8t4JuX7voJl8lX+Hz0hBPu8PuuAfUas2kvkHAx27zACzhods3Fdq9hEK3VOpBoVdu+SETjInB9wsu0rwn4MVw2rV8FaXAKVwEWvGetm56dBcO0vGBqhJ8IzGtCZJhF29fAkKFSbvsaUF+WbV8Dg4My8zPb+1qoGIaS12FewZo4AGjXUvJxvfbJzBim0/IlCKA8a9t6TqiRgVaT1PKigaqZkisoYN+1VTMgpaRmQK03ofPa4sLJaBgzBLFnfupsXAXQnjVa+/Cdl4NuYCtzoSMHVL1AQBxB5hou3xtwWlUHyehYAA3U0fWv2fEWONrlWgIlh7aB4p/OpqNaXmWG4SzxIzc1Ss+WLctiNUeNdQFYOLQUyjcJOOKFc7TY6Vrp7hREg+kn4RhKkNHlj5ICghfuJdKAphB7jxg6nvOD7+rJ5tshB6FZGJ5saTVYy66FPcMe/Kw2IUAxUO1/iyJtxb4Dv7LV+KOtoqD3TNs2YA8hnu83onnjJUsSprL+icnVQatpfmsueN34n//Ua6i48j4PZYLecsssUAPz8+CTM6qZmAdEVIze5F19ZGdA/cz24EiyLj3o/rAMrUjpQcDbv8u/EevHkh7hAKOAP910yacod6Y66uyKf9SiTikblnuA/Jv3UorDOaFjDdGqBZP1TOgfR93F+j481ruuKERJj0SXaYoIGuhYIB/vvBl/DpkOGvn2CyKeYiekDLOW80onAJPZEkYO5nLE6LhOpwfBcRZFn/8A+LdLXd1rMgrZsComrlv4s0EwHk+n41EYRRSC8UcCCYBXJ43L9z2XOPRYXeF7nU6XVwQdumQK3+VAzowoDfYQ8LSKmu/KvevF2M2y2q13bwDsog3IN8p+OeZ+NOO4Xlew6JYY7AF+FlPyTcXszd+wYQwhqg5yyKS0ciMzzPPZZEopu3QQtZNY/7/yTrJ9gOybySwxo6IaerLmiLHQRS9Xf4pwZrbIGKcpmBdAERhSji7tBBzHfE7IcJBLftagctpxv90ot56MfHZQgkoW+zCg2xLOSIwmeZ+/78D/4BgdC/AHhrqAD/jm9a3IS0yIaBbmaB1zgqIoQizHwDKnCVxGMXB9+E/34OcEt66vhrIscGe10oRzJcB5L2w1B1BGzUog1IGKziFXEkV783bHegjohoZw2UjomwqVCXFuariV4SEOHCo1VvRYdTSWteTMk4y0KqIIyudkNpuFEPCfJDGLjoeis7c1apAlNvX9oDY0ZyhQo+nAgmN2oyQfjMbTncXFH1EnMm4rApBeGc382rRCSwaqzVQ7bvwfcGPXGQnUgWUmzBh9FyOPk2cMSGYcEIxqDAaDxSKHeJlYph9FBZyRhlRmNkrLHO1ktwTkuowMSZrWpiX2sfj5EK4jucfX6EJ0Oh2O26dK0T0xb2wAINs/CHU/I5PdQ/mN7lRiTzS0OlBVzdoZ4tHAKfRUGEBVOcC31UB2AD8tTyWD8qP7lVDrwPX2ciRmVUjMqgo5AjxTWieu5eTWIYAYR8ZyuTMARVOD5KLJojDZiWSg2zC/5YLh65j4EOR2nARN8q5AQVaFkU8kA98+aWWUR0GvN0+Ygll2cvu1OMxESTSBYU8kY98uldm16p0S49LkwSTlXh0RLkSDEhjxRDLazQJNVrPLKAbsiAOlOUW2JUZngO9wjLyaUxa0drPkTF1mwuhWCEXxDCcumoBLd0qmy+lkaFUxvgMkMxpoYggMH1rtKJ/0kr7j6+lixSeSQUHE28wz+CgCZ9CxfZC6Dgpevq5dpR5TXp1IplfP2htAgiM25RBkRYzT+1tRCKVmNpucSIZDHzS4haZxGSbKIjbET4UZbae7dUKmsE/U6AX6qOjw+64OqFUqX/I9LAbKN7dTrbejhNWpZOr4jnv4jddGiGqoEizTJu+MQw2T4RbDU8lAP2hwi2ejQDWTVpIvE69/GxYm02PkU+tFoeKdI/WVUA7OoAzfMLXT6Y7xWjVBlitP9YChAY636ga0CoBrwJueV1oiGDvIkKclctKpZOA8CyKUP6Cb2ECCJ07UqNzhf9mYDHQBTiYDTdR5XpdLm/QqNbpjKI5LK82mO8JCGSbTCazhyWSQRTOc4GfDGLQ0Drp7Sd4rrMWOUqasEQrp6VGjGXwmfkn2ZXt0Kk6RlokkFwnojyklj3lxn0/OHEEdlc+kcjHB1UPzIYXJhmTZwqkKTd1lf9Sbq7ihfk4pDKq1cSPXlJM6EWfabRvS8DoLU5k5i3KXC1KTUZgyPSOn15tDrRlkSVnYxgjHF1r2PrG8sW22Quv1g85ENiiaZiXaFn56ghLHdMso8tKhXxajtisDUcGP7zsJSFDXgY8VlVIzgOKsbCvy84zQtNzIKIvWbTXU32CYyWYHl1R+FKDDhkx0XuoYRXxy36oWWZaPW3al0RItXK20ZURrR+XesFbgOpJ5ZyU2sZ6x/NySkpYDtuhKU71QJz0fPZkddbsGJqMz8rlk8LMZBBN2UgRtZtFwK5dBEkd6CAoo1MY73lPba52MM8+uUcaFnXO5SOctkqldZGUiRt0xUo47TfwX4zM5v+DawZGsGRIA+ZkfcQjYFRwMgOEUyoAb7X4wiEytK2cXVI9zVZNHy8/9iL3QsIkRciGQtFR0kYbeKaxqk0yskLFzQXLSmdVkWtgOzrF1vypTAjkorUxGT2m31KytmHLMXUYGKmd8yWuLZi4uSUshW5+AENi2g+N+u4NcxL7soTqYC9PGTnCFsm07SWVHFHheEUQta3qfMUaqKT5IOMvD+vITB//FillcTAY1N/loL9U4NlBAAsnz6XS7CVdVqLatmCASnApNgM82/0wa9TK4mMyOuu8GFRMdZV6UzA4YJjBYy+v6wI3VvXO5uB4ZlPrd/RH1FgPjUOSjg/MuRWiGL49lMUwUMACppRlcBAwPaZvPrYwCS2ROR3VOF5JBt3VnyhbFpfHwQm9f2QDuvzUPCzNVPE/NNTnS7RKkKhRiqS26oKh3Mpqfb9SPMIeYiS9/MtFnZTTwB8aMeNeR9UmKWscbpULTn0WpY5VgInAmEBIojIHJG54egRTvuyj2RBtqMl2jN7q00U43+CTJgYrzbMkakd2FQbrjOmKtdmdelIeuJ8VwSmlgBDoLYHmgiLNSKBxs0HwmYTD8hkNwKZn4E72MinPkTEhsb9KshIH3Rk/wdq1yZ5FeRdNkYhVgDuwURCIwdc0AlaNJcf2b+40Us9mAOr60NwHq1LTjZaSNw4TzbGugRvKrjIpKW1NFx8oqsolybDpDpYjgA3Sh4dLVc2B7IJWFGZRlzrj+nQMRoLrtiWNzF5OZ7VaZaP7EQ5mVzSwr1cTaKX2Z6aAw5cwTi8hE4w4TuzMSBBNoEZh36v6GzOigdE8wmSjqTC8kgxpb7HCI0NgLF4Sc75WJGrEFSGRp8Y7KovSVorAK23LdMXktGVXaXLQCoxHT0uHA3AzH0rocP70wqwdHPfooaJBGn4Op4tmakaT2QGC6TgpYVxy5k8FgMU+YNLTZCox6vpFNRa+CXMbpjid3VGvakOxOUA5sqj2I8a7QDFojiR97UicBI7syzXJYAl8ADChtoFXAVAq9tKFp74vRMAtYnCTxAJ8lb6hER27QzwkZNEsuiUiy8O590CB4vXts1RkB1ykt1FHWGQMrBROtl3NgCgxZLqEuyTspW3lVXXhRexFdWfJHc2aaF552dBw7J+l8/UIygx0PBnm3c8cXGGDGqiuEdeWn3RtzVgXKDFSW4ytjMOsZcpaWTbvWC5JXg1cyl7SmgtbX4L2ZgXT+PO8YTihnJVi8iOUwKPkAcDlgzQ7DTfVC1CY2KV69bBP7iNwKqJSm55PZoTB5pPCnqmXohbXAxXoQKfFPcqbUpRLkguSVRmq+9tCdXVTzGRAyIrzy2VFvfvFBx2hIxI5cqDM7icKIEbZlZOgDF824x8wsyGfz0fZKLy9L84wJGegojM8lg3ervplkZLu3YGnAyyyJjXAfktoW6coFsxvGpTmEhgx0RsZnLj3UxuKtXcdizVdlMki6fAjG2KWab8kX0XZHb4ksjCt0FpgSMho0Z8/LfeGFvZ2jjfGUmpdRzwdqBKp6ZiUfBLfgWJZso74vzpXSVFPiUCEyZ7Unw37KVlomrnd7GwMwElwNzHSWefeO9rBFZoc1chB1M+/XRIZTrwc/iUvbrvQRkGvtQqfQdk7IsGftthCwqG0EmWDXfWpCV4p9fgpypTCILKaz+aEhY73u2jwetceEAj+8Zjetg0IzAwE/FkxWrQVyfk6G8Sw0ZOQzyNQbOwy13Gq3E81iwHCSYbvCCE+5+XgU0NrLAa+GhZh9en/S2j7Z3mpjzjVfTYBcdQKdIWp9ZBY+rYoUqPgxGe/kCL73TuUFRi7YQ1c1ZRCpftNQyPQMFGOl09IF6koskaVTyUhvVF5lFllhJSBxIn1O5MB4ABn5lmyVB4IqV0OjXowT0xHbzyUfLMSwjHwrsQ1/0ciBwjImqAQhHIxpVac36iU9kYy6a1va62tRqDq2QSJp7ME+V1dCQ8Y9OVPc0+xitItSIPmepkuWj4pQpqNRntOq5WymWXFeG2zBsSfj6Uv7sFFoaLJo67I0Ebucj7P1glbSarfTkInOzXplwHMkJ6vsLJOtoS4anlXZMg8sS3N9JOMElIOkU5fakDH3NgnbA72SNI+VgGykqidmji5oQM9sq1RSC8qCQZSp1Q3InHNB1TbUQlJF3TZkmbcStbSttIzjEnh8PIFibGZain3ujToVDZndxSiHoANRVayhY4gR6ziGAwYq50FmtmxI9lCBHxoN5USltT2lIROete2qFGJFijtl3AWyXgos68aZGlqyruuxLKPIalGWvE6nx/4rmfw8XcDGKagkQZUtVRZTUdYiVpc13i7g8rGjBXwyHR4liGdUClIJGdSs8LztMDpwUscAQ80u41KOszLL9EKV7LLUJCgiI9HSeVq9NggZfnS+ydER0KlytgUMGa5/tdQN1XH0qKsj5eWzIIXTbEGjtpYjZJTxpYeHOLwhxjbvWDJf2YKNt0UjMg6HmlwNqGy2JWRQru5Sy5YHogZ8dgJeptQEyWS526HVm4KQQXHz63ddcZFM7qXxBQHGUwCn2QiRQd789b3BishkSj1QOGI1IzLXDwdBJ8mUVdx+iEYThIaM2AoZdCKNoFAj0yNkUDT4+hGUknh8lMjwZH8AihpdP7blvZKhscNGIWSsVsjYiAxPjYxAyMitkJFRyGfIo0gjJTK4G5jdChmLxK8COmR0QgZFjq7fq1wjYdIBnW3QMSGDqkKu3xRbIwHskM4BKCKxzqVWyDgkT2LSIdO09UMtXK6fQ2nIRHQSNA5xAlEy7/pH7cBbFaBPn9Bp7K5tkbn+GhVJ1jelcxICS+zatBUyMcnHD+mkzqwtMtdXBTop+9i1D7kFyCSk1Q4ZgRTkeHTygNtkrm/YKvO6VCqjQ6aJnCIy13cGUa2kXl+FRiGATULM7ZDpksLPEzunnIuMkEGi+foBlKa+mFJn54zEyxGZFkJb41oVO3TJIHOmhaBjUNsxIp3cuUeC/8hqbuHMRUJGp9MKuSS5U69VMjwdMkOSyUB7j1oI1I9qC5OjQyYlZOzWyCA7hqNzpHdFyMjtkBnUqp+jU6JRYDKKyrZDZkG05ZhKY7f6QIwh09I0y4mCWVCpNzExma4jtiPNGjIJlXqTkMzmuB0yISETUalqyLGc4Zli3iqZikrufFQLTU+et2KbNWQMZkEh3TwmqUxl2sqpyzMizYakeLJdTAkZtGO0hUxdQ0aickD1lLQ3U/NWyCTEXy4pkhEYL2kluZWQsExJJXU2rQWAgzq1tJB1aFqmlFTSAKQwQ0F7nNshg4PMZRvB3w+oS2a4AFXrtXDvmmM7SyqR8xCbMwpjSa1kHZpchkSFjF9bzYxstzIRTLI5a0hlmlXYbeYYWWvl3plkI1tKRQBIddyMR7mNFlIoJtlhVFARzVkdaxZFsZUUisnk+N+EitK06jRg5CpvyHQFUYwFpXecdch1ujyvQPB89+2vmKRsNqByVIVY15txKJKaVqaPTmcLFyO0P5yZT4PRYJGHs8T0o8KtqjQ1MNK0qtwiwu/NF4NREARjdJbjFP6NzntBv5T4RTXMGg+TYcYUDE2uDst2bdB0SLgycIhJoVRxWu+gtRhFMA+P7FPMUXMlhPmbbRuBX7fY1SjtbIhqoYm+HMmQPLShlW3Ombdk25OMagKnlG82IIcDlRk6kN5RxVgXBLxcunjlCDo6EhH+tpyR1F9i2ZTa7g/bTwQn8pDSpjMqqZPLe6cdB6H1MLBl0aoERIKm3fhcd16gaqMWQj8fobS+g0LnbFqbgdCRx61egNORxKSz6bSzq1f4NWEE3JSKA4AQtSsBeKYQz24CcTKkT1qffgrR9rzjK2EcBu0GpnVIBYr/v1ECXcuys8wrS6lGWXpbDrUyW3heacy2lFNHwAeL6rHDyrgnhia+yi7eQ645rdMQ0aLZ3m3G5xYLYRHA0WXe4qW+Im5UbPlys7lplFbupECHoVcpPgLRDrbWSExLyyAM317M2pGw0xpV1B28PMSyyVKyO/bdOM3t4SYoMkNn+xzCu9OX9ASaj8h+rA/RdqC9meWNA5++zi5uRnzHzojVlV6nOdUdnY8qR82jlGYvqUA6QL1VtgKALPK6THJ45gTOHEluXN7u9rkCL11vFGMAPQDklg2gU2ZGk2rYPD8FR0raVWRvgVqbHZels7YtH+sIA9VkSKKRHtCqOUqrDbelknaYTMZ4Ds3lj4B856OaAaTb+sU+KG9VqMHO3Mx6AVBJwzFejbFtYrmHwnpCwIgZ7QcDcEz4mGtqW/ute4fOn+3mjAdtckq9QLaAxPMxbWe2GsN5Bwzh3oIxkPK/wcFu8nESTX95HPGB9iHCGHKpjpUsV0bFHGU9q2bdCDIe7M+AsujTkJSk48i8B2pAeISm7qZJ4U7CcC+XHm41JR2tv64O1LD5KLujG7OWunchyAHjK/hZ3+j8UGh6BNeZFeyMmcuAR0/6hgduK+jZXKjhOnZ9PBBuiX+LMx1f0EMNrc89ir3LxlA8QFMCGgYq7jxFXcG8wxmn43GW3QUcbuzNe76sINWKPmVMYy/TfuDpMTtmHD3kS8siKiKOgBWE0RA717FUdwFMb3wOOoZen+9xmE6G7B8mBJycKaBuziDKLulnGNE9yfFz1N3xFnvPIwA4uAcA36ib2BomL+kq90+hAsGRnuq5d0TonhNlr9huvZpnf8IE20LHGzRDS0tZFbpd6ONzBJ1Or8vrjpWVRvSu8/qokGnb+0dBlcxge5zTYLTIwzxfjMY7G7QlRabRO1XzdHR1JzNcc7Br8C8cc981bFX/I6YWux8osynbdln54b/+/WUb//5XGFWlbcs4AXrgY+gA7LnpDb78/Hnf7999RL9///PnlyM+gRLAjjH+z+L/ZP5U/CPJ3JMvhNfF/pNh7vs/X958D9/x9fsPeqM7EYTMj+X93c8lgyl9eX7u93/2IaefpSiuNhlz9xMS6n9hlqufX74vH2464H0gZO6Xd/31erP8ff+wXK3/+vvJe7xfP37XGWb9rG++ZfbX+yd5Ja1+ZA9PT7TG1n/378u3/Xv0Wh/96df/94ZM/3nDLNfw68eS6T+vfy+Z9eNyzbDOsr+R79hfG/FrvF5LS3V93+Is+/vh28M9GiHE3f3fm9940Pfo7vUbfH1Y9zdP/efv35/vNj+eNnebh4fNtzdk7r4uv6yy9fNq+R0Se15+vfviPcI1s7a1TfZVZRj1l4SqueGUaxH95cNm/fR7s159f/z2uFn9KO8eH75vvIf/wDE9bH4/bzbf10/Lr3/BO/3VXq+elstf356y76t1/w2Z+9Wvh+X3H9+en798WT8/Pn25Wz5+u7tnmHhj/1T7jLC2GGa5dJ52WQLXwv1q+WSvlt/WK+/HUr7frLzl16V3V/7F/FjdwUmzGq7LX8zmx13mPXirXzbj3T0+LZ8eluT3GzL9Z/bu23K56sOvv5d3y+Xy969vP2JHXDHxr0cxXjGyaC+Hv4VWZdn35d1q/fxrvXpePcA/G/T1/Gv59Pzw63Hza7Pe/Gf12F8+rVYPy81q+bB83qC/lo9Pb58MlsfopfoLT1w4zfpQGv+EIhn9g6fs/SfDuBLIld/ivv+yZuoVD1/BL9d/vQqIf6TS/Efg/2T+VPyjyPwX7LwUnsGh5oYAAAAASUVORK5CYII="/>
+
+        </form> 
+
+    </section>
+
+    <section class="opciones" id="Sobre_Mi">
+
+        <h1>SOBRE MI</h1>
+
+        <h2>Nombre y Apellido</h2>
+            <p>Jose Manuel Rodrigo de la Encarnacion de Jesus Rementeria</p>
+
+        <h2>Fecha de Nacimiento</h2>
+            <p>9/2/1971</p>
+
+        <h2>Direccion</h2> 
+            <p>Capdevila 3145, CABA </p>
+
+        <h2>Telefono</h2> 
+            <p>(11) 390-4783</p>
+        <footer>
+            <input type="button" class="button" value="Enviame un mensaje" onclick="Mostrar('Inicio')">
+        </footer>
+
+    </section>
+
+    <section class="opciones" id="Educacion">
+
+        <h1>EDUCACION</h1>
+
+        <article>
+
+            <h2>Primaria</h2>
+
+            <h3>Escuela Provincial Nº 31 "Sargento Cabral"</h3>
+            <p>Mar del Plata, Pcia de Buenos Aires</p>
+            <img class="imgbox" src="https://scontent.fcrd5-1.fna.fbcdn.net/v/t39.30808-6/298769006_386670590287669_8224639415810182544_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeFSHLfz7KUGAmEnbso3lz_g7mIOhFHn4iHuYg6EUefiIRKcJeYPWej7UCmrNaVHs8A&_nc_ohc=SOpj1blICH8AX9UEd16&tn=rvgzXACJocnWom1f&_nc_ht=scontent.fcrd5-1.fna&oh=00_AfCS7_EHdaTK-nAQIGROa4mKY3F5QilH34P_1R6JUNqKxQ&oe=6401632C" />
+        
+        </article>
+
+        <article>
+
+            <h2>Secundaria</h2>
+            
+            <h3>Escuela Secundaria Nº 24 "Sargento Cabral"</h3>
+            <p>Villa Rosa, Pcia. de Buenos Aires</p>
+            <img class="imgbox" src="https://radioxpilar.com.ar/wp-content/uploads/2022/07/IMG-20220706-WA0032.jpg" />
+        
+        </article>
+
+        <article>
+
+            <h2>Universidad</h2>
+            
+            <h3>Universidad Tecnologica Nacional, Regional Buenos Aires</h3>
+            <p>CABA, Pcia. de Buenos Aires</p>
+            <img class="imgbox" src="http://www.latecno.com.ar/wp-content/uploads/2016/06/utn-baires-650x434.jpg" />
+        
+        </article>
+
+        <h2>Cursos</h2>
+        
+        <article>
+            <h3>Universidad Tecnologica Nacional, Regional Buenos Aires</h3>
+            <p>Introduccion al negocio Digital</p>
+            <img class="imgbox" src="https://marketplace.canva.com/EAFFFbUMFcI/1/0/1600w/canva-certificado-reconocimiento-cl%C3%A1sico-elegante-azul-y-dorado-RO7Ro0gP-WQ.jpg" />
+        </article>
+        
+        <article>       
+            <h3>Escuela de Ingenieria Nacional</h3>
+            <p>Herramientas Digitales</p>
+            <img class="imgbox" src="https://img.freepik.com/vector-gratis/plantilla-certificado-logro-plano_23-2148980412.jpg?w=2000" />
+        </article>
+        
+        <article>
+            <h3>Universidad de Salta</h3>
+            <p>Digitalizacion y Privacidad: Nuevos desafios</p>
+            <img class="imgbox" src="https://http2.mlstatic.com/D_NQ_NP_2X_920463-MLA32652655255_102019-F.webp%202x" />
+        </article>
+
+        <footer>
+            <input type="button" class="button" value="Enviame un mensaje" onclick="Mostrar('Inicio')">
+        </footer>
+
+    </section>
+
+    <section id="Experiencia">
+
+        <H1>EXPERIENCIA</H1>
+
+        <h2>Laboratorio Pascal</h2>
+        <h3>Pasante</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis. 
+        </p>
+
+        <h2>A&E Tecnologias</h2>
+        <h3>Tecnico en ofimatica</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis. 
+        </p>
+    
+        <h2>JALEHSA</h2>
+        <h3>Director de Proyectos</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis. 
+        </p>
+
+        <h2>OsCORP S.A.</h2>
+        <h3>Analista de Datos</h4>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis. 
+        </p>
+
+        <footer>
+            <input type="button" class="button" value="Enviame un mensaje" onclick="Mostrar('Inicio')">
+        </footer>
+
+    </section>
+
+    <section id="Habilidades">
+
+        <h1>HABILIDADES</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget massa mauris. Proin arcu ligula, posuere placerat eros id,
+            pretium malesuada ligula. Nam pretium interdum condimentum. Quisque ut bibendum leo, eget volutpat arcu. Integer pellentesque 
+            metus lacus, ut posuere dolor aliquet eu. Donec eget dictum est. Vivamus non urna quis.
+        </p>
+
+        <footer>
+            <input type="button" class="button" value="Enviame un mensaje" onclick="Mostrar('Inicio')">
+        </footer>
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+body {
+	background-color: black;
+	color: white;
+	font-family: "Oswald";
+}
+
+form {
+	width: fit-content;
+	margin: auto;
+	overflow: auto;
+	border: rgb(98, 156, 115) solid;
+	padding: 2%;
+}
+
+div {
+	float: left;
+	display: grid;
+}
+
+#Mensaje {
+	resize: none;
+}
+
+#IMG_Mensaje{
+	filter: invert(100%);
+	float: right;
+	width: 245px;
+	height: 276px;
+	object-fit: cover;
+	object-position: 0% -4%;
+}
+
+header {
+	font-family: "Anek Telugu";
+	margin-bottom: 0.5vh;
+}
+
+#Nombre {
+	font-size: 5vw;
+	border: 0.2vw solid;
+	width: max-content;
+	position: relative;
+	margin: auto;
+	padding-top: 1vw;
+	padding-left: 3vw;
+	padding-right: 3vw;
+}
+#Foto {
+	width: 14vw;
+	border: 0.3vw solid;
+	margin: auto;
+	display: block;
+	border-radius: 50%;
+	position: relative;
+	top: 1.3vh;
+	z-index: 1;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: white;
+}
+
+li {
+	float: left;
+	display: block;
+	width: 25%;
+	list-style-position: inside;
+	text-align: center;
+	color: black;
+}
+
+
+li i {
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+
+.indice:hover {
+	background-color: black;
+	color:white;
+	transition: 0.7s;
+}
+
+.icono {
+	color: black;
+}
+
+.indice:hover  .icono {
+	color: white;
+	transition: 0.7s;
+}
+
+section {
+	display: none;
+
+}
+
+.opciones {
+	margin: auto;
+	width: fit-content;
+}
+
+h1 {
+	font-size: xx-large;
+	color: rgb(98, 156, 115);
+	text-align: center;
+}
+
+legend{
+	font-size: xx-large;
+	color: rgb(98, 156, 115);
+	width: fit-content;
+	margin-left: 24%;
+	margin-top: 1%;
+}
+
+section article {
+	display: inline-table;
+	width: 19vw;
+	height: 47vh;
+	border: 0.1vw solid white;
+	overflow: clip;
+	margin: 1vw;
+}
+
+#Educacion h2 {
+	width: fit-content;
+	margin: auto;
+	color: #426b4f;
+}
+
+.imgbox {
+	width: 20vw;
+	border: #629c73 solid 0.2vw;
+	border-radius: 11%;
+	object-fit: fill;
+	height: 25vh;
+}
+
+.button {
+	background-color: black;
+	border: rgb(98, 156, 115) solid;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
